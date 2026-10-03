@@ -20,6 +20,8 @@ aside nav a { text-decoration: none; }
 .source-link { display: block; margin-top: 28px; }
 main { min-width: 0; }
 article { background: white; border: 1px solid #dce3e8; border-radius: 10px; padding: 36px 44px; }
+article img { display: block; max-width: 100%; height: auto; border-radius: 5px; }
+article a { overflow-wrap: anywhere; }
 h1, h2, h3 { color: #142a36; line-height: 1.3; scroll-margin-top: 24px; }
 h1 { font-size: 36px; margin: 0 0 28px; letter-spacing: -.025em; }
 h2 { font-size: 24px; margin: 42px 0 18px; border-top: 1px solid #e4e9ed; padding-top: 30px; }

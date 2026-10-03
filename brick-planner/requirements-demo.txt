@@ -1,0 +1,10 @@
+# Optional tools for regenerating the README's geometry-based images and GIFs.
+# These are not needed to run the planner or its solver.
+-r requirements.txt
+scikit-image==0.26.0
+pillow==12.3.0
+imageio==2.38.0
+lazy-loader==0.6
+networkx==3.7
+packaging==26.3
+tifffile==2026.9.20

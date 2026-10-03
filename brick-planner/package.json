@@ -14,7 +14,8 @@
     "start": ".venv/bin/python -m uvicorn backend.server:app --host 0.0.0.0 --port 5173",
     "start:local": ".venv/bin/python -m uvicorn backend.server:app --host 127.0.0.1 --port 5173",
     "test": "node --test tests/*.test.mjs",
-    "test:python": ".venv/bin/python -m unittest discover -s tests/python -p 'test_*.py'"
+    "test:python": ".venv/bin/python -m unittest discover -s tests/python -p 'test_*.py'",
+    "demo:render": "node scripts/render-demo.mjs"
   },
   "dependencies": {
     "fflate": "0.8.3",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "esbuild": "0.28.2",
-    "marked": "15.0.12"
+    "marked": "15.0.12",
+    "playwright": "1.61.1"
   }
 }

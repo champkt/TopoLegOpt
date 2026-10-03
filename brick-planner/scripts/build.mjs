@@ -16,6 +16,7 @@ const pages = [
   ["docs/DEVELOPMENT.md", "development.html", "Development"],
   ["brick-planner/EXPERIMENTS.md", "experiments.html", "Experiments"],
   ["examples/README.md", "example.html", "Example topology"],
+  ["examples/cantilever/README.md", "cantilever-demo.html", "Cantilever demo"],
 ];
 const escape = (text) => String(text).replace(/[&<>"']/g, (char) => ({
   "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
@@ -49,6 +50,9 @@ async function renderDocument([source, filename, title]) {
     },
     link({ href, title, tokens }) {
       return `<a href="${escape(documentLink(href, source))}"${title ? ` title="${escape(title)}"` : ""}>${this.parser.parseInline(tokens)}</a>`;
+    },
+    image({ href, title, text }) {
+      return `<img src="${escape(documentLink(href, source))}" alt="${escape(text)}"${title ? ` title="${escape(title)}"` : ""} loading="lazy">`;
     },
     table(token) {
       return `<div class="table-scroll" tabindex="0" role="region" aria-label="Reference table">${Renderer.prototype.table.call(this, token)}</div>`;

@@ -1,0 +1,36 @@
+{
+  "width": 720,
+  "height": 504,
+  "frames": 90,
+  "degreesPerFrame": 4,
+  "verticalAxis": "y",
+  "projection": "orthographic",
+  "sourceScale": 2.0064632464707377,
+  "elevationDegrees": 21.97918408022763,
+  "durationMsPerFrame": 80,
+  "cycleSeconds": 7.2,
+  "topology": {
+    "source_filename": "topology.npz",
+    "source_sha256": "85b843472204f3e95fb8e4f55ed26347fb5105e0133b57b58304d5d784640288",
+    "array_key": "density",
+    "threshold": 0.5,
+    "source_axes": [
+      "x",
+      "y",
+      "z"
+    ],
+    "up": "y",
+    "mirror": "none",
+    "units": "cubic source voxel edge lengths; no physical or brick scale applied",
+    "origin": "center of the source array bounding box",
+    "sample_location": "voxel centers",
+    "padding": "one zero-valued sample per boundary",
+    "algorithm": "skimage.measure.marching_cubes(method='lewiner', step_size=1)",
+    "working_dtype": "float32",
+    "scikit_image_version": "0.26.0",
+    "numpy_version": "2.5.3",
+    "method_reference": "https://doi.org/10.1080/10867651.2003.10487582",
+    "interpretation": "Interpolated density isosurface for visualization; solver fit uses thresholded cubic cells."
+  },
+  "caption": "Density 0.5 isosurface and brick assembly, matching Y-axis camera orbit and physical framing."
+}

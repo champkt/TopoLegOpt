@@ -13,6 +13,33 @@ packing, mechanical strength, or assembly without temporary supports.
 - [Portable example topology](examples/README.md)
 - [Development and hosting](docs/DEVELOPMENT.md)
 
+## Demo: uploaded cantilever
+
+The uploaded full cantilever has `60 × 60 × 120` cubic source voxels and a
+nominal volume fraction of 0.20. Both views below make one complete **360° turn
+around vertical Y**, with matching scale, camera settings, and timing.
+
+| Topology · density isosurface at 0.5 | brick assembly · 525 pieces |
+| --- | --- |
+| ![360-degree rotation of the uploaded cantilever topology about vertical Y](examples/cantilever/topology.gif) | ![Matching 360-degree rotation of the 525-piece brick cantilever assembly](examples/cantilever/assembly.gif) |
+
+This run uses the included **1,000-piece demo inventory**, Y up, no mirroring,
+automatic symmetry, and a **500-piece cap with 5% allowance**. The result uses
+525 structural bricks, achieves **66.8% shape IoU** and **80.3% target coverage**,
+and passes the independent assembly and sequence checks. It preserves X
+reflection symmetry with 25 structural bricks centered across the symmetry
+plane. The sequence identifies **71 placements needing temporary support**;
+those supports are not included in the piece count.
+
+The topology animation shows an interpolated density surface; fit metrics use
+the thresholded cubic-cell target. Brick colors identify part sizes. These are
+geometry-based renders, not a physical strength demonstration.
+
+[Try the NPZ](examples/cantilever/topology.npz) ·
+[Demo inventory](examples/cantilever/inventory.json) ·
+[Assembly and sequence JSON](examples/cantilever/assembly.json) ·
+[Settings, source image, and reproduction instructions](examples/cantilever/README.md)
+
 ## Run locally
 
 Use **Python 3.12** and **Node.js 18 or later** with npm. The pinned dependencies
@@ -208,7 +235,9 @@ brick-planner/
 ```
 
 The planner has no runtime dependency on the separate `MBB_1x1x2` or
-`pyFANTOM_refactor` research directories. They are excluded from this publication.
+`pyFANTOM_refactor` research directories. Those directories are excluded from
+publication; the explicitly supplied cantilever demo assets are copied into
+`examples/cantilever/` with provenance.
 
 ## Method references and library credits
 
