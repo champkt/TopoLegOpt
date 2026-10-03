@@ -1,6 +1,7 @@
 # TopoLegOpt
 
-TopoLegOpt turns a cubic-voxel topology and a collection of rectangular bricks into an inventory-constrained assembly proposal. It chooses a scale,
+TopoLegOpt turns a cubic-voxel topology and a collection of rectangular bricks
+into an inventory-constrained assembly proposal. It chooses a scale,
 fits individual bricks, checks their stud connections and symmetry, and displays
 the result with a step-by-step build sequence.
 
@@ -19,7 +20,7 @@ The uploaded full cantilever has `60 × 60 × 120` cubic source voxels and a
 nominal volume fraction of 0.20. Both views below make one complete **360° turn
 around vertical Y**, with matching scale, camera settings, and timing.
 
-| Topology · density isosurface at 0.5 | brick assembly · 525 pieces |
+| Topology · density isosurface at 0.5 | Brick assembly · 525 pieces |
 | --- | --- |
 | ![360-degree rotation of the uploaded cantilever topology about vertical Y](examples/cantilever/topology.gif) | ![Matching 360-degree rotation of the 525-piece brick cantilever assembly](examples/cantilever/assembly.gif) |
 
