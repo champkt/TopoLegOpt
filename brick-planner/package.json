@@ -1,0 +1,27 @@
+{
+  "name": "topolegopt",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Inventory-constrained brick assembly planning from volumetric topology",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "prestart": "npm run build",
+    "prestart:local": "npm run build",
+    "start": ".venv/bin/python -m uvicorn backend.server:app --host 0.0.0.0 --port 5173",
+    "start:local": ".venv/bin/python -m uvicorn backend.server:app --host 127.0.0.1 --port 5173",
+    "test": "node --test tests/*.test.mjs",
+    "test:python": ".venv/bin/python -m unittest discover -s tests/python -p 'test_*.py'"
+  },
+  "dependencies": {
+    "fflate": "0.8.3",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "marked": "15.0.12"
+  }
+}

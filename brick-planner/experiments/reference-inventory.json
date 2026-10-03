@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "name": "EXPERIMENT ONLY - 1000 mixed bricks",
+  "geometry": { "stud_pitch": 5, "layer_height": 6, "units": "relative" },
+  "parts": [
+    { "id": "1x1", "studs": [1,1], "height_layers": 1, "role": "detail", "quantity": 80 },
+    { "id": "2x1", "studs": [2,1], "height_layers": 1, "role": "structure", "quantity": 120 },
+    { "id": "4x1", "studs": [4,1], "height_layers": 1, "role": "structure", "quantity": 120 },
+    { "id": "6x1", "studs": [6,1], "height_layers": 1, "role": "structure", "quantity": 80 },
+    { "id": "2x2", "studs": [2,2], "height_layers": 1, "role": "structure", "quantity": 100 },
+    { "id": "2x3", "studs": [2,3], "height_layers": 1, "role": "structure", "quantity": 100 },
+    { "id": "2x4", "studs": [2,4], "height_layers": 1, "role": "structure", "quantity": 160 },
+    { "id": "2x6", "studs": [2,6], "height_layers": 1, "role": "structure", "quantity": 120 },
+    { "id": "2x8", "studs": [2,8], "height_layers": 1, "role": "structure", "quantity": 120 }
+  ]
+}

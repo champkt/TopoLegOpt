@@ -1,0 +1,35 @@
+name: Verify planner
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: brick-planner/package-lock.json
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: brick-planner/requirements.txt
+      - name: Install
+        working-directory: brick-planner
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt
+          npm ci
+      - name: Build and verify
+        working-directory: brick-planner
+        run: |
+          npm run build
+          npm test
+          npm run test:python
+          .venv/bin/python ../examples/create_topology.py --output /tmp/topolegopt-example.npz
+          .venv/bin/python scripts/experiment.py --npz /tmp/topolegopt-example.npz

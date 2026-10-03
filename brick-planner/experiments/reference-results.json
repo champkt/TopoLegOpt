@@ -1,0 +1,105 @@
+{
+  "purpose": "Reference experiments only; not the user browser inventory or newly uploaded file",
+  "recorded_date": "2026-10-03",
+  "source": "../MBB_1x1x2/results/rmin6_sweep_20261002_220846/vf_0.15/topology.npz",
+  "source_sha256": "a4f9bd081bc36f90e44077b7b632f55cd9271a5c19d9753e31c5689d910ca14f",
+  "inventory": "experiments/reference-inventory.json",
+  "numpy": "2.5.3",
+  "scipy": "1.18.1",
+  "results": [
+    {
+      "case": "mirror-none_cap-500",
+      "success": true,
+      "piece_count": 524,
+      "structural_count": 524,
+      "detail_count": 0,
+      "maximum_pieces": 525,
+      "shape_iou": 0.7576874816283925,
+      "target_coverage": 0.8704964849772692,
+      "material_precision": 0.8539449714304057,
+      "structural_utilization": 0.5695652173913044,
+      "elapsed_seconds": 1.012,
+      "symmetry_axes": [
+        "x"
+      ],
+      "checks_passed": true,
+      "insertion_paths": true,
+      "temporary_support_steps": 37,
+      "center_crossing_pieces": {
+        "x": 4
+      }
+    },
+    {
+      "case": "mirror-z_cap-100",
+      "success": true,
+      "piece_count": 104,
+      "structural_count": 104,
+      "detail_count": 0,
+      "maximum_pieces": 105,
+      "shape_iou": 0.5307506086306689,
+      "target_coverage": 0.6879818606681969,
+      "material_precision": 0.6990086891094567,
+      "structural_utilization": 0.11304347826086956,
+      "elapsed_seconds": 0.163,
+      "symmetry_axes": [
+        "x",
+        "z"
+      ],
+      "checks_passed": true,
+      "insertion_paths": true,
+      "temporary_support_steps": 14,
+      "center_crossing_pieces": {
+        "x": 2,
+        "z": 12
+      }
+    },
+    {
+      "case": "mirror-z_cap-500",
+      "success": true,
+      "piece_count": 522,
+      "structural_count": 518,
+      "detail_count": 4,
+      "maximum_pieces": 525,
+      "shape_iou": 0.7789738530278923,
+      "target_coverage": 0.8872238721415754,
+      "material_precision": 0.8645815479512118,
+      "structural_utilization": 0.5630434782608695,
+      "elapsed_seconds": 0.532,
+      "symmetry_axes": [
+        "x",
+        "z"
+      ],
+      "checks_passed": true,
+      "insertion_paths": true,
+      "temporary_support_steps": 43,
+      "center_crossing_pieces": {
+        "x": 6,
+        "z": 24
+      }
+    },
+    {
+      "case": "mirror-z_cap-inventory",
+      "success": true,
+      "piece_count": 1000,
+      "structural_count": 920,
+      "detail_count": 80,
+      "maximum_pieces": 1000,
+      "shape_iou": 0.7441830430802457,
+      "target_coverage": 0.7693280823426901,
+      "material_precision": 0.9579279375903179,
+      "structural_utilization": 1.0,
+      "elapsed_seconds": 0.945,
+      "symmetry_axes": [
+        "x",
+        "z"
+      ],
+      "checks_passed": true,
+      "insertion_paths": true,
+      "temporary_support_steps": 92,
+      "center_crossing_pieces": {
+        "x": 2,
+        "z": 24
+      }
+    }
+  ]
+}

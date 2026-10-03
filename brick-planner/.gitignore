@@ -1,0 +1,7 @@
+node_modules/
+.venv/
+.local/
+__pycache__/
+dist/
+dist-next/
+dist-old/
