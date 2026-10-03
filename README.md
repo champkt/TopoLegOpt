@@ -5,7 +5,7 @@ into an inventory-constrained assembly proposal. It chooses a scale,
 fits individual bricks, checks their stud connections and symmetry, and displays
 the result with a step-by-step build sequence.
 
-The planner is a **bounded heuristic research prototype**. A successful result
+**This is not a research project**. A successful result
 passes explicit geometric checks; it is not a proof of maximum scale, optimal
 packing, mechanical strength, or assembly without temporary supports.
 
